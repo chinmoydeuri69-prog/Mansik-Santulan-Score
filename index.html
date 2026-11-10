@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f7f3">
+  <meta name="description" content="An experimental digital wellbeing reflection tool.">
+
+  <title>Mindful Metrics | Digital Wellbeing</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- HEADER -->
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Mindful Metrics home">
+        <span class="brand-mark" aria-hidden="true">m</span>
+        <span>mindful<span class="brand-light">metrics</span></span>
+      </a>
+
+      <div class="topbar-note">
+        <span class="status-dot"></span>
+        A moment to check in
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO SECTION -->
+      <section class="hero">
+
+        <div class="hero-copy">
+          <p class="eyebrow">YOUR DIGITAL WELLBEING SNAPSHOT</p>
+
+          <h1>
+            A little more aware.<br>
+            <span>A little more balanced.</span>
+          </h1>
+
+          <p class="hero-description">
+            Explore how your everyday digital habits fit alongside
+            study, rest and movement. A few details are all it takes
+            to create your snapshot.
+          </p>
+
+          <div class="hero-footnote">
+            <span class="sparkle">✳</span>
+            No judgement. Just a chance to reflect.
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Reflection reminder">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+
+          <div class="hero-card-icon">✦</div>
+
+          <p class="card-kicker">A GENTLE REMINDER</p>
+
+          <p class="card-quote">
+            Your habits are information, not your identity.
+          </p>
+
+          <div class="card-line"></div>
+
+          <p class="card-small">
+            Small changes can start with noticing.
+          </p>
+        </aside>
+
+      </section>
+
+
+      <!-- MAIN WORKSPACE -->
+      <section class="workspace">
+
+        <!-- INPUT FORM -->
+        <form id="predict-form" class="form-card" novalidate>
+
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">YOUR CHECK-IN</p>
+              <h2>Tell us about your routine</h2>
+            </div>
+
+            <span class="time-chip">◷ &nbsp;2–3 min</span>
+          </div>
+
+
+          <!-- SECTION 01: PERSONAL INFORMATION -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+              <span class="section-number">01</span>
+
+              <div>
+                <h3>A little about you</h3>
+                <p>Some general background to get started.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="age">Age</label>
+
+                <input
+                  id="age"
+                  name="age"
+                  type="number"
+                  min="10"
+                  max="100"
+                  step="1"
+                  placeholder="e.g. 18"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="gender">Gender</label>
+
+                <select id="gender" name="gender" required>
+                  <option value="">Choose an option</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+
+              <div class="form-group full-width">
+                <label for="country">Country</label>
+
+                <input
+                  id="country"
+                  name="country"
+                  type="text"
+                  placeholder="Where are you based?"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="academic_level">Academic level</label>
+
+                <select
+                  id="academic_level"
+                  name="academic_level"
+                  required
+                >
+                  <option value="">Select your level</option>
+                  <option value="High School">High School</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Graduate">Graduate</option>
+                </select>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- SECTION 02: DIGITAL ROUTINE -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+              <span class="section-number">02</span>
+
+              <div>
+                <h3>Your digital routine</h3>
+                <p>Think about a typical day, not a perfect one.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="most_used_platform">
+                  Most-used platform
+                </label>
+
+                <select
+                  id="most_used_platform"
+                  name="most_used_platform"
+                  required
+                >
+                  <option value="">Choose a platform</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Snapchat">Snapchat</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="YouTube">YouTube</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="LINE">LINE</option>
+                  <option value="KakaoTalk">KakaoTalk</option>
+                  <option value="VKontakte">VKontakte</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="WeChat">WeChat</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="purpose_of_use">Main purpose</label>
+
+                <select
+                  id="purpose_of_use"
+                  name="purpose_of_use"
+                  required
+                >
+                  <option value="">Choose a purpose</option>
+                  <option value="Networking">Networking</option>
+                  <option value="Education">Education</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="News">News</option>
+                </select>
+              </div>
+
+
+              <div class="form-group">
+                <label for="avg_daily_usage_hours">
+                  Daily screen time <span class="unit">hours</span>
+                </label>
+
+                <input
+                  id="avg_daily_usage_hours"
+                  name="avg_daily_usage_hours"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.5"
+                  placeholder="e.g. 4.5"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="daily_unlocks">
+                  Phone unlocks per day
+                </label>
+
+                <input
+                  id="daily_unlocks"
+                  name="daily_unlocks"
+                  type="number"
+                  min="0"
+                  step="1"
+                  placeholder="e.g. 45"
+                  required
+                >
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- SECTION 03: DAILY LIFESTYLE -->
+          <div class="form-section">
+
+            <div class="form-section-title">
+              <span class="section-number">03</span>
+
+              <div>
+                <h3>Life beyond the screen</h3>
+                <p>Approximate daily hours are absolutely fine.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="study_hours">Study hours</label>
+
+                <input
+                  id="study_hours"
+                  name="study_hours"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.5"
+                  placeholder="e.g. 5"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="physical_activity_hours">
+                  Physical activity <span class="unit">hours</span>
+                </label>
+
+                <input
+                  id="physical_activity_hours"
+                  name="physical_activity_hours"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.5"
+                  placeholder="e.g. 1"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="sleep_hours_per_night">
+                  Sleep per night <span class="unit">hours</span>
+                </label>
+
+                <input
+                  id="sleep_hours_per_night"
+                  name="sleep_hours_per_night"
+                  type="number"
+                  min="0"
+                  max="24"
+                  step="0.5"
+                  placeholder="e.g. 8"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="stress_level">
+                  How would you describe your stress?
+                </label>
+
+                <input
+                  id="stress_level"
+                  name="stress_level"
+                  type="hidden"
+                  value=""
+                >
+
+                <div
+                  class="stress-options"
+                  id="stress_level_group"
+                  role="group"
+                  aria-label="Select stress level"
+                >
+                  <button
+                    type="button"
+                    data-value="Low"
+                    aria-pressed="false"
+                  >
+                    Low
+                  </button>
+
+                  <button
+                    type="button"
+                    data-value="Medium"
+                    aria-pressed="false"
+                  >
+                    Medium
+                  </button>
+
+                  <button
+                    type="button"
+                    data-value="High"
+                    aria-pressed="false"
+                  >
+                    High
+                  </button>
+
+                  <button
+                    type="button"
+                    data-value="Very High"
+                    aria-pressed="false"
+                  >
+                    Very high
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <!-- FORM FOOTER -->
+          <div class="form-footer">
+
+            <p>
+              <span class="lock-icon">⌑</span>
+              Your answers are used to generate this snapshot.
+            </p>
+
+            <button
+              type="submit"
+              id="submit-btn"
+              class="primary-button"
+            >
+              <span>Generate my snapshot</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+
+          </div>
+
+        </form>
+
+
+        <!-- RESULT CARD -->
+        <aside class="result-card" aria-live="polite">
+
+          <div class="result-topline">
+            <span class="result-indicator"></span>
+            YOUR SNAPSHOT
+          </div>
+
+
+          <!-- INITIAL STATE -->
+          <div id="state-idle" class="result-state idle-state">
+
+            <div class="illustration">
+              <div class="illustration-ring ring-a"></div>
+              <div class="illustration-ring ring-b"></div>
+
+              <div class="illustration-center">
+                <span>✳</span>
+              </div>
+
+              <span class="float-dot dot-a"></span>
+              <span class="float-dot dot-b"></span>
+              <span class="float-dot dot-c"></span>
+            </div>
+
+            <h2>
+              Your reflection<br>
+              starts here.
+            </h2>
+
+            <p>
+              Complete the check-in and your model-generated
+              snapshot will appear in this space.
+            </p>
+
+            <div class="result-tip">
+              <span>✦</span>
+
+              <p>
+                <strong>Take your time</strong><br>
+                There are no right or wrong answers.
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- LOADING STATE -->
+          <div
+            id="state-loading"
+            class="result-state loading-state"
+            hidden
+          >
+
+            <div class="loader-ring"></div>
+
+            <h2>Putting your snapshot together</h2>
+
+            <p>
+              One moment while we process your answers.
+            </p>
+
+          </div>
+
+
+          <!-- RESULT STATE -->
+          <div
+            id="state-result"
+            class="result-state score-state"
+            hidden
+          >
+
+            <p class="score-caption">YOUR MODEL SCORE</p>
+
+            <div class="score-display">
+              <span id="score-number">0.00</span>
+              <span class="score-out-of">/ 10</span>
+            </div>
+
+            <div class="score-track">
+              <div
+                id="gauge-fill"
+                class="score-track-fill"
+              ></div>
+            </div>
+
+            <h2 id="score-band">Your result</h2>
+
+            <p id="score-context" class="score-context"></p>
+
+            <div class="result-tip">
+              <span>✦</span>
+
+              <p>
+                <strong>Keep the bigger picture in mind</strong><br>
+                A single number cannot describe your overall wellbeing.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              id="reset-btn"
+              class="secondary-button"
+            >
+              Review my answers <span>↗</span>
+            </button>
+
+          </div>
+
+
+          <!-- ERROR STATE -->
+          <div
+            id="state-error"
+            class="result-state error-state"
+            hidden
+          >
+
+            <div class="error-symbol">!</div>
+
+            <h2 id="error-label">
+              We couldn't create your snapshot
+            </h2>
+
+            <p id="error-copy" class="error-copy">
+              Please check your connection and try
