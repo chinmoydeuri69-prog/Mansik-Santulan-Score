@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "http://127.0.0.1:8000";
+  const API_BASE = "https://mansik-santulan-score-6-8whx.onrender.com";
   const REQUEST_TIMEOUT_MS = 30000;
   const SCORE_MAX = 10;
 
